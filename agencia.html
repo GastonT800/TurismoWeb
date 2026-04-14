@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencias - Turismo Explora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/agencia.css">
+</head>
+
+<body>
+
+    <header id="main-header"></header>
+
+    <main class="agencias-container">
+
+        <!-- HERO -->
+        <section class="hero-minimal">
+            <h1>Agencias Certificadas</h1>
+            <p>Trabajamos con los mejores expertos para tu viaje</p>
+        </section>
+
+        <!-- GRID -->
+        <section class="agencias-grid">
+
+            <!-- CARD 1 -->
+            <article class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- FRENTE -->
+                    <div class="flip-front">
+                        <span class="badge">Oficial</span>
+                        <img src="assets/imagenes/AgenciaPatagonia.png" alt="Agencia Patagonia">
+                        <h3>Patagonia Extrema</h3>
+                        <p>Especialistas en Glaciares</p>
+                    </div>
+
+                    <!-- ATRÁS -->
+                    <div class="flip-back">
+                        <h3>Detalles</h3>
+                        <p>Más de 15 años recorriendo el sur argentino</p>
+
+                        <div class="skills-turismo">
+                            <label>Seguridad</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+
+                            <label>Sustentabilidad</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- RATING CSS -->
+                        <div class="rating-css">
+                            <input type="radio" name="star1" id="a1-5">
+                            <label for="a1-5">★</label>
+
+                            <input type="radio" name="star1" id="a1-4">
+                            <label for="a1-4">★</label>
+
+                            <input type="radio" name="star1" id="a1-3" checked>
+                            <label for="a1-3">★</label>
+
+                            <input type="radio" name="star1" id="a1-2">
+                            <label for="a1-2">★</label>
+
+                            <input type="radio" name="star1" id="a1-1">
+                            <label for="a1-1">★</label>
+                        </div>
+
+                        <span class="rating-label">Puntaje comunidad</span>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="flip-card">
+                <div class="flip-inner">
+
+                    <!-- FRENTE -->
+                    <div class="flip-front">
+                        <span class="badge">Premium</span>
+                        <img src="assets/imagenes/AgenciaAmazona.png" alt="Agencia Amazonas">
+                        <h3>Amazonas Tours</h3>
+                        <p>Ecoturismo y aventura</p>
+                    </div>
+
+                    <!-- ATRÁS -->
+                    <div class="flip-back">
+                        <h3>Experiencia</h3>
+                        <p>Expertos en fauna y naturaleza</p>
+
+                        <div class="skills-turismo">
+                            <label>Conocimiento</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+
+                            <label>Equipo</label>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="rating-css">
+                            <input type="radio" name="star2" id="a2-5">
+                            <label for="a2-5">★</label>
+
+                            <input type="radio" name="star2" id="a2-4" checked>
+                            <label for="a2-4">★</label>
+
+                            <input type="radio" name="star2" id="a2-3">
+                            <label for="a2-3">★</label>
+
+                            <input type="radio" name="star2" id="a2-2">
+                            <label for="a2-2">★</label>
+
+                            <input type="radio" name="star2" id="a2-1">
+                            <label for="a2-1">★</label>
+                        </div>
+
+                        <span class="rating-label">Puntaje comunidad</span>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer"></footer>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button class="toggle-theme" onclick="toggleMode()" aria-label="Cambiar modo oscuro">
+        🌙 Modo
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

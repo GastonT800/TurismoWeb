@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - Turismo Explora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/precio.css">
+</head>
+
+<body>
+
+    <header id="main-header"></header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero-secondary">
+            <h1>Comparador de Destinos</h1>
+            <p>Elegí el mejor plan para tu viaje</p>
+        </section>
+
+        <!-- TABLA -->
+        <section class="precios-section">
+
+            <div class="table-container">
+
+                <table class="tabla-precios">
+
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Precio</th>
+                            <th>Incluye</th>
+                            <th>Duración</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Roma</td>
+                            <td>$550</td>
+                            <td>
+                                <span class="tooltip">
+                                    ✔ Básico
+                                    <span class="tooltip-text">Incluye hotel + desayuno</span>
+                                </span>
+                            </td>
+                            <td>5 días</td>
+                        </tr>
+
+                        <tr>
+                            <td>Maldivas</td>
+                            <td>$1200</td>
+                            <td>
+                                <span class="tooltip">
+                                    ✔ Premium
+                                    <span class="tooltip-text">Todo incluido + excursiones</span>
+                                </span>
+                            </td>
+                            <td>7 días</td>
+                        </tr>
+
+                        <tr>
+                            <td>Alpes</td>
+                            <td>$800</td>
+                            <td>
+                                <span class="tooltip">
+                                    ✔ Aventura
+                                    <span class="tooltip-text">Guía + equipo completo</span>
+                                </span>
+                            </td>
+                            <td>6 días</td>
+                        </tr>
+
+                        <tr>
+                            <td>España Gastronómica</td>
+                            <td>$950</td>
+                            <td>
+                                <span class="tooltip">
+                                    ✔ Gourmet
+                                    <span class="tooltip-text">Tours + degustaciones</span>
+                                </span>
+                            </td>
+                            <td>5 días</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer"></footer>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button class="toggle-theme" onclick="toggleMode()" aria-label="Cambiar modo oscuro">
+        🌙 Modo
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

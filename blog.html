@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Destinos - Turismo Explora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+    <header id="main-header"></header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero-secondary">
+            <h1>Blog de Destinos</h1>
+            <p>Inspiración, consejos y experiencias de viaje</p>
+        </section>
+
+        <div class="blog-container">
+
+            <!-- FILTROS -->
+            <input type="radio" name="category" id="all" checked hidden>
+            <input type="radio" name="category" id="cultural" hidden>
+            <input type="radio" name="category" id="naturaleza" hidden>
+            <input type="radio" name="category" id="aventura" hidden>
+
+            <div class="filter-menu">
+                <label for="all">Todos</label>
+                <label for="cultural">Cultural</label>
+                <label for="naturaleza">Naturaleza</label>
+                <label for="aventura">Aventura</label>
+            </div>
+
+            <!-- GRID NEWSPAPER -->
+            <section class="blog-newspaper-grid">
+
+                <!-- DESTACADO -->
+                <article class="post featured cat-aventura reveal">
+                    <div class="post-img">
+                        <img src="assets/imagenes/AventuraMontaña.png" alt="Aventura montaña">
+                        <span class="category-tag">Aventura</span>
+                    </div>
+
+                    <div class="post-info">
+                        <h2>Aventura en la Montaña</h2>
+                        <p class="post-meta">Abril 2026 • Por Turismo Explora</p>
+                        <p>Descubrí los mejores destinos de trekking y viví experiencias únicas en la naturaleza</p>
+                        <a href="#" class="read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- POSTS -->
+                <article class="post cat-cultura reveal">
+                    <div class="post-img">
+                        <img src="assets/imagenes/RutaHistorica.png" alt="Cultura">
+                        <span class="category-tag">Cultural</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Ruta Histórica</h3>
+                        <p>Un recorrido por los lugares más emblemáticos del mundo</p>
+                    </div>
+                </article>
+
+                <article class="post cat-naturaleza reveal">
+                    <div class="post-img">
+                        <img src="assets/imagenes/ParaisoNaturales.png" alt="Naturaleza">
+                        <span class="category-tag">Naturaleza</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Paraísos Naturales</h3>
+                        <p>Explorá paisajes increíbles y conectá con la naturaleza</p>
+                    </div>
+                </article>
+
+                <article class="post cat-aventura reveal">
+                    <div class="post-img">
+                        <img src="assets/imagenes/TurismoExtremo.png" alt="Aventura">
+                        <span class="category-tag">Aventura</span>
+                    </div>
+                    <div class="post-info">
+                        <h3>Turismo Extremo</h3>
+                        <p>Para los que buscan adrenalina y experiencias únicas</p>
+                    </div>
+                </article>
+
+            </section>
+
+        </div>
+
+        <!-- COMENTARIOS -->
+        <section class="blog-comments reveal">
+            <h2>Comentarios</h2>
+
+            <div class="comments-wrapper">
+
+                <div class="comment-item">
+                    <div class="avatar-css"></div>
+                    <div class="comment-content">
+                        <strong>Lucas Gómez</strong>
+                        <p>Excelente contenido, me dieron ganas de viajar ya mismo</p>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="avatar-css v2"></div>
+                    <div class="comment-content">
+                        <strong>Ana Torres</strong>
+                        <p>Muy buenas recomendaciones, súper útil</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer"></footer>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button class="toggle-theme" onclick="toggleMode()" aria-label="Cambiar modo oscuro">
+        🌙 Modo
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- SCROLL REVEAL -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/destinos.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="main-header"></header>
+
+    <main class="container-destinos">
+
+        <!-- HERO -->
+        <section class="hero-secondary">
+            <h1>Explora el Mundo</h1>
+        </section>
+
+        <!-- INPUTS  -->
+        <input type="radio" name="filtro" id="todos" checked hidden>
+        <input type="radio" name="filtro" id="cultural" hidden>
+        <input type="radio" name="filtro" id="naturaleza" hidden>
+        <input type="radio" name="filtro" id="playa" hidden>
+        <input type="radio" name="filtro" id="gastronomico" hidden>
+
+        <!-- BOTONES-->
+        <section class="filtros">
+            <div class="filter-controls">
+                <label for="todos">Todos</label>
+                <label for="cultural">Cultural</label>
+                <label for="naturaleza">Naturaleza</label>
+                <label for="playa">Sol y Playa</label>
+                <label for="gastronomico">Gastronómico</label>
+            </div>
+        </section>
+
+        <!-- DESTINOS -->
+        <section class="destinos-grid">
+
+            <article class="dest-card cultural alto">
+                <div class="img-wrapper">
+                    <img src="assets/imagenes/ColiseoRomano.png" alt="Coliseo Romano">
+                    <div class="overlay">
+                        <h3>Coliseo Romano</h3>
+                        <p>Historia Imperial</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dest-card naturaleza medio">
+                <div class="img-wrapper">
+                    <img src="assets/imagenes/MontañasAlapes.png" alt="Montañas Alpes">
+                    <div class="overlay">
+                        <h3>Los Alpes</h3>
+                        <p>Aventura Pura</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="dest-card playa bajo">
+                <div class="img-wrapper">
+                    <img src="assets/imagenes/PlayaMaldivas.png" alt="Playa Maldivas">
+                    <div class="overlay">
+                        <h3>Playa Maldivas</h3>
+                        <p>Relax Total</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- MACHU PICCHU CORREGIDO -->
+            <article class="dest-card cultural alto">
+                <div class="img-wrapper">
+                    <img src="assets/imagenes/MachuPichu.png" alt="Machu Picchu">
+                    <div class="overlay">
+                        <h3>Machu Picchu</h3>
+                        <p>Historia Inca</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- TABLA -->
+        <section class="precios-container">
+            <h2>Precios y Disponibilidad</h2>
+
+            <div class="table-scroll">
+                <table class="tabla-destinos">
+
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Categoría</th>
+                            <th>Temporada</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td data-label="Destino">Roma Antigua</td>
+                            <td data-label="Categoría">Cultural</td>
+                            <td data-label="Temporada">Alta</td>
+                            <td data-label="Precio">$550</td>
+                        </tr>
+
+                        <tr>
+                            <td data-label="Destino">Islas Maldivas</td>
+                            <td data-label="Categoría">Playa</td>
+                            <td data-label="Temporada">Baja</td>
+                            <td data-label="Precio">$1200</td>
+                        </tr>
+
+                        <tr>
+                            <td data-label="Destino">Machu Picchu</td>
+                            <td data-label="Categoría">Cultural</td>
+                            <td data-label="Temporada">Media</td>
+                            <td data-label="Precio">$900</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer"></footer>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <button class="toggle-theme" onclick="toggleMode()" aria-label="Cambiar modo oscuro">
+        🌙 Modo
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
