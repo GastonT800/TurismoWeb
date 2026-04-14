@@ -1,0 +1,149 @@
+/* CONTENEDOR */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+/* TARJETA */
+.contact-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* FULL WIDTH */
+.form-group.full {
+    grid-column: span 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-group.full {
+        grid-column: span 1;
+    }
+}
+
+/* INPUTS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+/* FOCUS */
+input:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* VALIDACIÓN */
+input:valid, textarea:valid {
+    border-color: #2ecc71;
+}
+
+input:invalid, textarea:invalid {
+    border-color: #ff4d4d;
+}
+
+/* MENSAJE ERROR */
+.error-msg {
+    display: none;
+    color: red;
+    font-size: 0.75rem;
+}
+
+input:invalid + .error-msg,
+textarea:invalid + .error-msg {
+    display: block;
+}
+
+/* BOTÓN */
+.cta-button {
+    background: var(--accent-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+/* SPINNER */
+.cta-button.loading .btn-text {
+    visibility: hidden;
+}
+
+.cta-button.loading::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 3rem;
+    color: #2ecc71;
+}
+
+/* BOTÓN MODAL */
+.close-modal-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}

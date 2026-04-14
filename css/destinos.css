@@ -1,0 +1,166 @@
+/*  FILTRO CSS  */
+
+.dest-card { 
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+/* Mostrar según filtro */
+#todos:checked ~ .destinos-grid .dest-card { display: block; }
+#cultural:checked ~ .destinos-grid .cultural { display: block; }
+#naturaleza:checked ~ .destinos-grid .naturaleza { display: block; }
+#playa:checked ~ .destinos-grid .playa { display: block; }
+#gastronomico:checked ~ .destinos-grid .gastronomico { display: block; }
+
+/*  BOTONES FILTRO */
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-controls label {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Botón activo */
+#todos:checked ~ .filter-controls label[for="todos"],
+#cultural:checked ~ .filter-controls label[for="cultural"],
+#naturaleza:checked ~ .filter-controls label[for="naturaleza"],
+#playa:checked ~ .filter-controls label[for="playa"],
+#gastronomico:checked ~ .filter-controls label[for="gastronomico"] {
+    background: var(--accent-color);
+    color: white;
+}
+
+/*  GRID MASONRY  */
+
+.destinos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 30px;
+    gap: 15px;
+    padding: 1rem;
+}
+
+.alto { grid-row: span 20; }
+.medio { grid-row: span 15; }
+.bajo { grid-row: span 10; }
+
+/*  TARJETAS  */
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.dest-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* ZOOM */
+.dest-card:hover img {
+    transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.dest-card:hover .overlay {
+    opacity: 1;
+}
+
+/* TABLA */
+
+.table-scroll {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.tabla-destinos {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.tabla-destinos th,
+.tabla-destinos td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-destinos thead {
+    background: var(--secondary-accent);
+    color: white;
+}
+
+/* RESPONSIVE TABLA  */
+
+@media screen and (max-width: 600px) {
+
+    .tabla-destinos,
+    .tabla-destinos thead,
+    .tabla-destinos tbody,
+    .tabla-destinos th,
+    .tabla-destinos td,
+    .tabla-destinos tr {
+        display: block;
+    }
+
+    .tabla-destinos thead {
+        display: none;
+    }
+
+    .tabla-destinos tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    .tabla-destinos td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .tabla-destinos td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: bold;
+        color: var(--accent-color);
+    }
+}
+
+/* ANIMACIÓN  */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

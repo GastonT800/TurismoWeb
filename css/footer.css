@@ -1,0 +1,116 @@
+/* FOOTER */
+.footer-container {
+    background-color: var(--footer-bg);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* TÍTULOS */
+.footer-column h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* FORMULARIO */
+.newsletter-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+    outline: none;
+}
+
+/* ACCESIBILIDAD */
+.newsletter-form input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-accent);
+    transform: scale(1.05);
+}
+
+/* REDES */
+.social-list {
+    list-style: none;
+}
+
+.social-list a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.social-list a:hover {
+    color: var(--accent-color);
+}
+
+/* MAPA */
+.mapa-responsive iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* COPYRIGHT */
+.footer-copy {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        border-radius: 5px;
+    }
+}

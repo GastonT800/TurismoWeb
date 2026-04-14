@@ -1,0 +1,106 @@
+/* CONTENEDOR */
+.precios-section {
+    padding: 3rem 1rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+/* TABLA */
+.tabla-precios {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+/* ENCABEZADO */
+.tabla-precios thead {
+    background: var(--secondary-accent);
+    color: white;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* HOVER */
+.tabla-precios tbody tr {
+    transition: 0.3s;
+}
+
+.tabla-precios tbody tr:hover {
+    background: rgba(0,0,0,0.05);
+    transform: scale(1.01);
+}
+
+/* TOOLTIP */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* TEXTO TOOLTIP */
+.tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* APARECER */
+.tooltip:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+    .tabla-precios thead {
+        display: none;
+    }
+
+    .tabla-precios,
+    .tabla-precios tbody,
+    .tabla-precios tr,
+    .tabla-precios td {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-precios tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+    }
+
+    .tabla-precios td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .tabla-precios td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: bold;
+        color: var(--accent-color);
+    }
+}
